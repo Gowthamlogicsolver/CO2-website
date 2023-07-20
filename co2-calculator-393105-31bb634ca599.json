@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "co2-calculator-393105",
+  "private_key_id": "31bb634ca5994b503273160ecc3b137e1a7018ac",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0TatjuvJF077m\n4c3UWc4TofG/f1iJw0dkQmEmTQcxv1hscdzm15IQhTQhbY7RW8XBD5pg7p7x918L\nUm0AKlA+Kr7YNA6RYxWYtx1EVR/g6ynYKFGR8eL0HZ8VDHIsk1N2gL9snC6B2Iad\nEcWrwCD4zJe5kqEhtEbHaNaCE6QX0YYPHMkJ339mYT4jTxZh0ChEMDePW2y9TYw8\nZ/5PmBshQTWXCkman75aFDEal/3obr1lDNlfPrJxixdavPb4JNKPE/oQBG+sJRWz\n8Fn+9m84NUZFZqvZXTetwva2Gi7YujmaH5cm9QLgyXT4EfEIY/dCZJ2271901Rkh\nPx2BthLBAgMBAAECggEAKk63UrWBN+VRvDdr5tITywOLCFZHXjwWOm5hAW29rGyr\nwPaO0RPwUDQRYW6lvnZ8VqrknK4hWcGj6bIzpYBIR+4bzfuZF4BahvUgxvH6gvpr\nXS9IxKgvivyQYY4EFHWVdg8L295iA1HddGnBKmXw1rCbQY4ohRIaMZxmCSu2q2e2\nuyMq6kl8IaKRF2dnpNtRUNApZTlA4TdCAjBomTlKyaQ78Qmwho8cximTRo7FbxGb\nR/xCmRggDwSfmgnkHoAFup2VgAR9EEN4jvONgqdjXeN/qaMjsB5tmdzMn5R+quT5\nSaUi5ohmVV5KjKwWnivFISYZYdr/172nF4BzhgO16QKBgQD6fRKn5x60fGv257Me\ntRE89dA8e3s726joP0Bxnm0Z5nVStuxj9yTK4powDgYHnJsUYS3EmFjfF2jm4b36\nHNEBJSGqBiGLuKfvzLqqmmseW7b3r7FI8TPxFysMa2EFt6nEkeauFL6klDZoxa6t\nzsSxOqKdHcz2O7akHLKWvXjfmwKBgQC4RUO6THbWyAUDrd35AJCamTqwCuAfZOMU\nkPDmhrg0r+io0oFrxvphJnc3e6wqNGdQjxUkM/U4v17GUcAgG+H7Hvqq58sIoQKL\ncZzBs4DccXAQgVo0VymdA/VlxjF7cWBLPMl3HDZam3i2lMMHZBDiqi4qrtYBbrKr\nZsZXcpSy0wKBgQDOV+fdXpvBrFk37Mh2PEx1/jzLBiGPPrUWlLxenFZdpqXxPHTh\nKH8rjp3bhkHbVVu+3wrXz3QuWtd0knNwLPrTSaZArIpH0hatiOYgkdI6EO1Zfma5\notDaAu7YbUBgeFqmblYsAzTE2L81cdsinJkVMisw6JKmKKyc5nMLkAuZjwKBgHom\nF/4/v6sijghhUbpEwJZqqneVzfmhk9HHPplhhmwOi4iVegsqrECIEhDqXzbe4/mH\nz3jfJFfIq5eFC3l9YjBn2bw+yNzgdmJfHo1cYzg9zg5y4Iu/l6sou5wKZDSy9CUL\nl3Toc7NeSgel1x5oG7VVICNVIDF04uUxzJqdLqrXAoGAMl+RYY1Cy6gMFvK3+bjx\npGfG7SFq2D3csSe/v/17Cm1r9y7AioOnTrwScjOA3acQKbbiTGbZXJT2AN7es9wJ\npSbFfWx6wWJLDxQlffOinlCRdgWbdu6BZrbm52j49k8atRs/PWhxDdKeoSt0eLj3\nPf0+u9GzfOOsQmwwjSkv6pU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gowtham-s@co2-calculator-393105.iam.gserviceaccount.com",
+  "client_id": "104231709556091205631",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gowtham-s%40co2-calculator-393105.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

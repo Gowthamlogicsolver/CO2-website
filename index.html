@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Landing Page</title>
+  <link rel="stylesheet" href="index.css">
+
+  <script>
+    // Replace 'YOUR_SHEETDB_API_ENDPOINT_URL' with your actual SheetDB API endpoint URL
+    const sheetdbEndpoint = 'https://sheetdb.io/api/v1/ksfpva2y2xkbm';
+
+    fetch(sheetdbEndpoint)
+      .then(response => response.json())
+      .then(data => {
+        // Assuming the last row is at the end of the array
+        const lastRowData = data[data.length - 1];
+
+        // Access the values using the column names from your Google Sheet
+        const column6Value = lastRowData.Result;
+        // Add more columns as needed...
+
+        // Display the result in the 'result' div
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `<p>CARBON EMITTED: ${column6Value}</p>`;
+        // Add more lines to display other columns...
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="glass-container" id="padd">
+    <nav>
+      <div class="nav-container">
+        <!-- <img src="mission-logo.png" style="size:30%;"> -->
+        <ul class="nav-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="login.html">CARBON FORM</a></li>
+          <li><a href="https://docs.google.com/spreadsheets/d/1Etllkh-PlBst8f3jNpSMqKEejt5bnw4izmHYFpDx7hg/edit#gid=0">CO2 SHEET</a></li>
+          <li><a href="https://www.iea.org/reports/co2-emissions-in-2022">CARBON EMISSION</a></li>
+          <div style="display:flex;align-items: center;justify-content: center;">
+          <!-- <li id="result"></li> -->
+        </div>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <div id="result">
+      </div>
+    </section>
+    
+    <!-- <section class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor purus a ligula accumsan venenatis.</p>
+      </div>
+    </section>
+    
+    <section class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor purus a ligula accumsan venenatis.</p>
+      </div>
+    </section>
+    
+    <section class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor purus a ligula accumsan venenatis.</p>
+      </div>
+    </section>  -->
+  </main>
+  
+  <!-- <footer>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+  </footer> -->
+</body>
+</html>

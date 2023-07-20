@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link  href="form.css"  rel="stylesheet">
+    <link  href="page2.html" >
+
+    <script>
+      function processForm(event) {
+        event.preventDefault();
+    
+      var pcValue = parseFloat(document.getElementById('Power Consumption').value);
+      var dcValue = parseFloat(document.getElementById('Diesel Consumption').value);
+      var wcValue = parseFloat(document.getElementById('Water Consumption').value);
+      var mpValue = parseFloat(document.getElementById('Man Power').value);
+      var pacValue = parseFloat(document.getElementById('Paint Consumption').value);
+
+      // Apply the formula
+      var result = (pcValue * 0.85) + (dcValue * 2.68) + ((wcValue / 1000) * 0.298) + (mpValue * 7.292) + (pacValue * 0.659);
+
+      console.log('Result:', result);
+
+
+      var currentDate = new Date();
+      var formattedDate = currentDate.toLocaleDateString(); // Format the date as desired
+      
+      var data = {
+        PowerConsumption: pcValue,
+        DieselConsumption: dcValue,
+        WaterConsumption:wcValue,
+        ManPower:mpValue,
+        PaintConsumption:pacValue,
+        Result: result,
+        Date: formattedDate
+      };
+
+      var endpointUrl = 'https://sheetdb.io/api/v1/ksfpva2y2xkbm';
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', endpointUrl, true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          console.log(xhr.status)
+          if (xhr.status === 201) {
+            console.log('Success! Data has been submitted.');
+            
+          } else {
+            console.error('Error occurred while submitting data.');
+          }
+        }
+      };
+
+      xhr.send(JSON.stringify(data));
+    
+        
+      }
+    
+      document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('sheetdb-form');
+        if (form) {
+          location.reload();
+          form.addEventListener('submit', processForm);
+        } else {
+          console.error('Form element not found.');
+        }
+      });
+    </script>
+
+</head>
+<body>
+  <div class="login-box">
+    <form action="https://sheetdb.io/api/v1/ksfpva2y2xkbm" method="post" id="sheetdb-form"  >
+        <div class="user-box">
+      
+          <!-- <label for="pc"><b>Power Consumption</b></label> -->
+          <input type="number" id="Power Consumption" step="0.000001" placeholder="Enter Power Consumption" name="Power Consumption" required>
+          </div>
+          <div class="user-box">
+      
+          <!-- <label for="ds"><b>Diesel Consumption</b></label> -->
+          <input type="number" id="Diesel Consumption" step="0.000001" placeholder="Enter Diesel Consumption" name="Diesel Consumption" required>
+        </div>
+        <div class="user-box">
+      
+          <!-- <label for="wc"><b>Water Consumption</b></label> -->
+          <input type="number" id="Water Consumption" step="0.000001" placeholder="Enter Water Consumption" name="Water Consumption" required>
+        </div>
+        <div class="user-box">
+      
+          <!-- <label for="mp"><b>Man Power</b></label> -->
+          <input type="number" id="Man Power" step="0.000001" placeholder="Enter Man Power" name="Man Power" required>
+        </div>
+        <div class="user-box">
+
+          <!-- <label for="pac"><b>Paint Consumption</b></label> -->
+          <input type="number" id="Paint Consumption" step="0.000001" placeholder="Enter Paint Consumtion" name="Paint Consumption" required>
+        </div>
+          
+      
+          <div class="sub">
+            <button type="submit" class="signupbtn">Submit</button>
+          </div>
+          <br>
+          <div class="linktohome">
+            <a href="index.html" style="text-decoration: none;color: rgb(239, 235, 235);font-size:15px;">Back To Home</a>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+    
+    
+  
+
+</body>
+</html>
+
+
+
