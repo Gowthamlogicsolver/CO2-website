@@ -18,11 +18,13 @@
 
         // Access the values using the column names from your Google Sheet
         const column6Value = lastRowData.Result;
+        const value = lastRowData.Date;
         // Add more columns as needed...
 
         // Display the result in the 'result' div
         const resultDiv = document.getElementById('result');
-        resultDiv.innerHTML = `<p>CARBON EMITTED: ${column6Value}</p>`;
+        const resultDiv1 = document.getElementById('date');
+        resultDiv.innerHTML = `<p>CARBON EMITTED: ${column6Value}</p><p>RECENTLY UPDATED DATE: ${value}</p>`;
         // Add more lines to display other columns...
       })
       .catch(error => {
@@ -53,6 +55,8 @@
   
   <main>
     <section class="hero">
+      <div id="date">
+      </div>
       <div id="result">
       </div>
     </section>
